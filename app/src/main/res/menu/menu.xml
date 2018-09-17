@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/checkInternet"
+        android:icon="@android:drawable/ic_menu_rotate"
+        app:showAsAction="ifRoom"
+        android:title="@string/refresh" />
+    <item android:id="@+id/settings"
+        android:title="@string/setting"
+        app:showAsAction="never"/>
+</menu>

@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Popular Movies App</string>
+    <string name="movie_thumbnail">Movie Thumbnail</string>
+    <string name="detail_error_message">Movie data not available</string>
+    <string name="overview">Overview</string>
+    <string name="original_language">Original Language: </string>
+    <string name="release_date">Release Date: </string>
+    <string name="vote">Vote: </string>
+    <string name="popularity">Popularity: </string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+    <string name="setting">Setting</string>
+    <string name="radio_popularity">Popularity</string>
+    <string name="radio_top_rated">Top Rated</string>
+    <string name="sorted_by">Sort By</string>
+    <string name="small_thumbnail">Small Thumbnail</string>
+    <string name="refresh">Refresh</string>
+    <string-array name="sort_by">
+        <item>Popularity</item>
+        <item>Top Rated</item>
+    </string-array>
+    <string-array name="sort_by_values">
+        <item>popular</item>
+        <item>top_rated</item>
+    </string-array>
+</resources>
