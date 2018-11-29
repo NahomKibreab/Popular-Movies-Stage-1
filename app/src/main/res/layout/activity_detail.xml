@@ -4,6 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#5e5e5e"
+    android:orientation="vertical"
+    android:fillViewport="true"
     tools:context=".DetailActivity">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -115,6 +117,7 @@
                 android:layout_below="@id/popularity"/>
         </RelativeLayout>
         <LinearLayout
+            android:id="@+id/movie_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -127,6 +130,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#e16e6e"
+                android:shadowColor="#994b4b"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="0.01"
                 android:textSize="30sp"
                 android:layout_gravity="center"/>
             <TextView
@@ -134,6 +141,39 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#fff"/>
+            <TextView
+                android:text="@string/trailers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#e16e6e"
+                android:shadowColor="#994b4b"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="0.01"
+                android:textSize="30sp"
+                android:layout_gravity="center"/>
+            <com.nknahom.movieapp1.popularmoviesapp.Utils.CustomListView
+                android:id="@+id/movie_trailer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                />
+            <TextView
+                android:text="@string/reviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#e16e6e"
+                android:shadowColor="#994b4b"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="0.01"
+                android:textSize="30sp"
+                android:layout_gravity="center"/>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/review_cardview"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>

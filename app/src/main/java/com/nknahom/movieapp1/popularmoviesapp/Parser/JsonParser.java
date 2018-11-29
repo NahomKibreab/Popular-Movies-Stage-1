@@ -3,7 +3,6 @@ package com.nknahom.movieapp1.popularmoviesapp.Parser;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-import com.nknahom.movieapp1.popularmoviesapp.Utils.Keys;
 import com.nknahom.movieapp1.popularmoviesapp.Utils.NetworkUtils;
 
 import com.squareup.okhttp.OkHttpClient;
@@ -44,4 +43,19 @@ public class JsonParser {
         return null;
     }
 
+    public static JSONObject getMovieTrailer(String movie_id){
+        try {
+            OkHttpClient client = new OkHttpClient();
+            URL getURL = NetworkUtils.buildTrailer(movie_id);
+
+            Request request = new Request.Builder()
+                    .url(getURL)
+                    .build();
+            Response response = client.newCall(request).execute();
+            return new JSONObject(response.body().string());
+        } catch (@NonNull IOException | JSONException e) {
+            Log.e(TAG, "" + e.getLocalizedMessage());
+        }
+        return null;
+    }
 }

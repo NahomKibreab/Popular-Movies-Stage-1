@@ -37,4 +37,35 @@ public class NetworkUtils {
         return url;
     }
 
+    public static URL buildTrailer(String movie_id) {
+        String movie_url = Keys.MOVIE_BASE_URL + movie_id + "/videos";
+        Uri builtUri = Uri.parse(movie_url).buildUpon()
+                .appendQueryParameter(Keys.API, Keys.API_KEY)
+                .build();
+
+        URL url = null;
+        try {
+            url = new URL(builtUri.toString());
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        return url;
+    }
+
+    public static URL buildReview(String movie_id) {
+        String movie_url = Keys.MOVIE_BASE_URL + movie_id + "/reviews";
+        Uri builtUri = Uri.parse(movie_url).buildUpon()
+                .appendQueryParameter(Keys.API, Keys.API_KEY)
+                .build();
+
+        URL url = null;
+        try {
+            url = new URL(builtUri.toString());
+            Log.i("urlReview", String.valueOf(url));
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        return url;
+    }
+
 }

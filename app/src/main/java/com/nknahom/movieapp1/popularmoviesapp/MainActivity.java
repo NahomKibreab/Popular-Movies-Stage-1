@@ -195,6 +195,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
                             for(int jIndex = 0; jIndex < lenArray; jIndex++) {
 
                                 JSONObject innerObject = array.getJSONObject(jIndex);
+                                int movie_id = innerObject.getInt(Keys.MOVIE_ID);
                                 String backdrop_path = innerObject.getString(Keys.MOVIE_BACKDROP_PATH);
                                 String original_title = innerObject.getString(Keys.MOVIE_ORIGINAL_TITLE);
                                 String poster_path = innerObject.getString(Keys.MOVIE_POSTER_PATH);
@@ -205,8 +206,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
                                 String original_language = " " + innerObject.getString(Keys.MOVIE_ORIGINAL_LANGUAGE);
                                 String movie_overview = innerObject.getString(Keys.MOVIE_OVERVIEW);
 
-                                Movie model = new Movie(backdrop_path, original_title, poster_path, title, release_date, vote_average, popularity, original_language, movie_overview);
-
+                                Movie model = new Movie(movie_id, backdrop_path, original_title, poster_path, title, release_date, vote_average, popularity, original_language, movie_overview);
                                 // Adding name and phone concatenation in List
 
                                 list.add(model);
